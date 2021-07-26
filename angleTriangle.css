@@ -1,0 +1,36 @@
+.angle_triangle{
+    width: 100%;
+}
+
+.angle_triangle h1{
+    padding: 20px;
+    padding-top: 0;
+    margin: 15px;
+    height: auto;
+}
+
+.angle_input{
+    height: 10vh;
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid black;
+}
+
+#output{
+    width: 50%;
+    border-radius: 6px;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+#submit_btn{
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
