@@ -105,6 +105,29 @@ h1{
     align-items: center;
 }
 
+/* Footer for links */
+.footer_link{
+    width: 100%;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.footer_link_heading{
+    padding: 0 10px;
+    margin: 0;
+}
+
+.footer_link_list{
+    padding: 0;
+    margin: 0;
+}
+
+.footer_link_list li{
+    display: inline;
+    margin: auto;
+    padding: 15px;
+}
+
 
 @media screen and (min-width: 360px) {
     .grid{
@@ -142,5 +165,13 @@ h1{
         margin: auto;
         margin-top: 20px;
     }
+
+    .footer_link{
+        width: 40%;
+        height: 20%;
+        margin: auto;
+        margin-top: 20px;
+    }
 }
+
 
