@@ -9,7 +9,8 @@ body{
 .main{
     text-align: center;
     align-items: center;
-    /* height: 71vh; */
+    height: 71vh;
+    /* display: flex; */
 }
 
 h1{
@@ -65,15 +66,21 @@ h1{
     margin: auto;
 }
 
-.angle_triangle{
-    width: 100%;
+.go_back_link{
+    width: 10%;
+    height: 7vh;
+    padding: 10px;
+    margin: auto;
+    text-decoration: none;
+    background-color: brown;
+    color: white;
+    border-radius: 8px;
 }
 
-.angle_triangle h1{
-    padding: 20px;
-    padding-top: 0;
-    margin: 15px;
-    height: auto;
+#submit_btn{
+    display: block;
+    margin: auto;
+    padding: 10px;
 }
 
 .angle_input{
@@ -83,8 +90,9 @@ h1{
     border: 2px solid black;
 }
 
+
 #output{
-    width: 50%;
+    width: 30%;
     border-radius: 6px;
     background-color: brown;
     color: white;
@@ -96,18 +104,34 @@ h1{
     align-items: center;
 }
 
-#submit_btn{
-    display: block;
-    margin: auto;
-    padding: 10px;
-}
 
 @media screen and (min-width: 360px) {
-    .triangle_link{
-        padding: 25px;
-        margin: 5px;
-        
+    .grid{
+        width: 100%;
+        height: auto;
+        padding: 20px;
     }
+
+    h1{
+        width: 100%;
+        height: auto;
+        margin: 30px 0;
+        padding-top: 25px; 
+    }
+
+    .triangle_link{
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .go_back_link{
+        padding: 10px;
+    }
+
+    #output{
+        width: 50%;
+    }
+    
 }
 
 @media screen and (min-width: 768px) {
