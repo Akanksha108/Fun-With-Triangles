@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+html{
+    background: url("http://www.gamesoft.com/Uploads/Themes/223/geometric-triangular-hm.jpg") no-repeat center center fixed; 
+    background-size: cover;
+}
+
 body{
     text-align: center;
 }
