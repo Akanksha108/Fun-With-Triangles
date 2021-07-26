@@ -7,7 +7,7 @@ const angleInput3 = document.getElementById("angle_input_3");
 const submitBtn = document.getElementById("submit_btn");
 
 let output = document.getElementById("output");
-console.log(output.value);
+
 
 function angleTriangle(event){
 
