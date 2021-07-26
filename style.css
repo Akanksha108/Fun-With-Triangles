@@ -7,10 +7,9 @@ body{
 }
 
 .main{
-    /* display: flex; */
     text-align: center;
     align-items: center;
-    height: 71vh;
+    /* height: 71vh; */
 }
 
 h1{
@@ -64,6 +63,30 @@ h1{
 .footer_img{
     width: 30px;
     margin: auto;
+}
+
+.angle_triangle{
+    width: 100%;
+}
+
+.angle_triangle h1{
+    padding: 20px;
+    padding-top: 0;
+    margin: 15px;
+    height: auto;
+}
+
+.angle_input{
+    height: 10vh;
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid black;
+}
+
+#submit_btn{
+    display: block;
+    margin: auto;
+    padding: 10px;
 }
 
 @media screen and (min-width: 360px) {
