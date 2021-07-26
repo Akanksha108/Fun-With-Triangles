@@ -12,8 +12,8 @@
         <div>
             <h1>Welcome to Fun with Triangles</h1>
             <div class="grid">
-                <div class="col">
-                    <a href="" class="triangle_link">Angles of Triangle?</a>
+                <div class="column">
+                    <a href="angleTriangle.html" class="triangle_link">Angles of Triangle?</a>
                     <a href="" class="triangle_link">Check Hypotenuse</a>
                 </div>
                 <div class="column">
@@ -24,20 +24,22 @@
         </div>
     </div>
 
-    <div class="angle_triangle">
-        <h1 class="angle_heading">Enter the angles in below input boxes and we will let you know if those angles make a triangle</h1>
+    <div class="hypotenuse">
 
-        <form class="angle">
-            <input type="text" class="angle_input" id="angle_input_1">
-            <input type="text" class="angle_input" id="angle_input_2">
-            <input type="text" class="angle_input" id="angle_input_3">
+        <a href="index.html" class="go_back_link">Go Back</a>
+
+        <h1>Enter the lengths of sides of right angle triangle</h1>
+
+        <form class="hypotenuse_form">
+            <input type="text" class="angle_input" id="input_1">
+            <input type="text" class="angle_input" id="input_2">
 
             <button type="submit" id="submit_btn">Submit</button>
         </form>
-        
-        <!-- Output -->
-        <p id="output">Output will be shown here</p>
 
+        <h3>Hypotenuse will be calculated here</h3>
+
+        <p id="output"> c = √(a<sup>2</sup> + b<sup>2</sup>)</p>
     </div>
     
     <footer class="footer">
@@ -52,5 +54,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="hypotenuse.js"></script>
 </body>
 </html>
