@@ -9,47 +9,7 @@
     height: auto;
 }
 
-.angle_input{
-    height: 10vh;
-    padding: 10px;
-    margin: 20px;
-    border: 2px solid black;
-}
 
-#output{
-    width: 50%;
-    border-radius: 6px;
-    background-color: brown;
-    color: white;
-    text-align: center;
-    margin: auto;
-    padding: 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    align-items: center;
-}
 
-.go_back_link{
-    width: 10%;
-    height: 7vh;
-    padding: 10px;
-    display: block;
-    margin: auto;
-    text-decoration: none;
-    background-color: brown;
-    color: white;
-    border-radius: 8px;
-}
 
-#submit_btn{
-    display: block;
-    margin: auto;
-    padding: 10px;
-}
 
-@media screen and (min-width: 360px) {
-    .go_back_link{
-        width: 50%;
-        padding: 10px;
-    }
-}
