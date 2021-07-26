@@ -53,6 +53,7 @@ h1{
 .footer_list{
     list-style-type: none;
     text-align: center;
+    padding-left: 0;
 }
 
 .footer_list li{
