@@ -5,6 +5,7 @@
 
 .angle_triangle{
     width: 100%;
+    min-height: 70vh;
 }
 
 .angle_triangle h1{
