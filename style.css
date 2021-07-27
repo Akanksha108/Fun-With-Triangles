@@ -167,6 +167,11 @@ h1{
     display: none;
 }
 
+.display_error{
+    font-size: large;
+    font-weight: bold;
+}
+
 
 @media screen and (min-width: 360px) {
     .grid{
