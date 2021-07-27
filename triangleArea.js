@@ -2,8 +2,6 @@
 
 let baseHeight = document.getElementById("base_height");
 
-let length2SidesAndAngle = document.getElementById("length_2_and_angle");
-
 let baseHeightOutputForm = document.getElementById("base_and_height_output_form");
 
 let output1 = document.querySelector("#output1");
@@ -110,4 +108,49 @@ length3Sides.addEventListener("click", function(event){
 
 calculateBtn2.addEventListener("click", calculateArea2);
 
+//If you have 2 sides and included angle
+
+let side1 = document.getElementById("input_a");
+
+let side2 = document.getElementById("input_b");
+
+let angleInput = document.getElementById("input_c");
+
+let calculateBtn3 = document.querySelector("#submit_btn3");
+
+let length2SidesAndAngle = document.getElementById("length_2_and_angle");
+
+let twoSidesAndAngle = document.querySelector("#two_sides_and_angle");
+
+let output = document.getElementById("output3");
+
+function calculateArea3(event){
+    event.preventDefault();
+
+    let side1Value = parseInt(side1.value);
+
+    let side2Value = parseInt(side2.value);
+
+    let angleInputValue = parseInt(angleInput.value);
+
+    console.log((0.7853981633974483) * (180/Math.PI));
+
+    let area = 0.5 * side1Value * side2Value * Math.sin(angleInputValue);
+
+    output.innerHTML = "Area = " + area;
+}
+
+length2SidesAndAngle.addEventListener("click",function(event){
+
+    event.preventDefault();
+
+    if(twoSidesAndAngle.style.display == 'none'){
+        twoSidesAndAngle.style.display = 'block';
+    }
+    else{
+        twoSidesAndAngle.style.display = 'none'
+    }
+});
+
+calculateBtn3.addEventListener("click", calculateArea3);
 
