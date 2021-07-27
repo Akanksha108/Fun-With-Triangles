@@ -148,6 +148,10 @@ h1{
     font-weight: bold;
 }
 
+#base_and_height{
+    display: none;
+}
+
 
 @media screen and (min-width: 360px) {
     .grid{
