@@ -14,7 +14,7 @@ body{
 .main{
     text-align: center;
     align-items: center;
-    height: 71vh;
+    /* height: 71vh; */
     /* display: flex; */
 }
 
@@ -150,7 +150,7 @@ h1{
 
 #base_and_height{
     display: none;
-}
+} 
 
 
 @media screen and (min-width: 360px) {
