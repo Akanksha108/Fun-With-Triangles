@@ -4,7 +4,7 @@ const angle_Input2 = document.getElementById("input_2");
 
 let submitHypo = document.getElementById("submit_btn");
 
-let output = document.getElementById("output");
+let output = document.querySelector(".output");
 
 function calculateHypotenuse(event){
 
