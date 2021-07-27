@@ -1,6 +1,6 @@
-let baseHeight = document.getElementById("base_height");
+// Triangle containing base and height
 
-length3Sides = document.getElementById("length_3");
+let baseHeight = document.getElementById("base_height");
 
 let length2SidesAndAngle = document.getElementById("length_2_and_angle");
 
@@ -47,3 +47,18 @@ baseHeight.addEventListener("click", function(event){
 });
 
 calculateBtn.addEventListener("click", calculateArea);
+
+// If you have length of 3 sides
+
+let length3Sides = document.getElementById("length_3");
+
+let lengthOf3SidesDiv = document.getElementById("length_of_3_sides");
+
+length3Sides.addEventListener("click", function(){
+    if(lengthOf3SidesDiv.style.display == 'none'){
+        lengthOf3SidesDiv.style.display = 'block';
+    }else{
+        lengthOf3SidesDiv.style.display = 'none';
+    }
+});
+
