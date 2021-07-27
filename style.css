@@ -176,6 +176,11 @@ label{
     font-weight: bold;
 }
 
+/* For third radio button */
+#two_sides_and_angle{
+    display: none;
+}
+
 
 @media screen and (min-width: 360px) {
     .grid{
