@@ -6,11 +6,28 @@ let length2SidesAndAngle = document.getElementById("length_2_and_angle");
 
 let baseHeightOutputForm = document.getElementById("base_and_height_output_form");
 
-console.log(baseHeightOutputForm);
-
 let output = document.querySelector(".output");
 
-let calculateBtn = document.querySelector("submit_btn");
+let calculateBtn = document.querySelector("#submit_btn");
+
+let base = document.getElementById("base");
+
+let height = document.getElementById("height");
+
+
+function calculateArea(event){
+
+    event.preventDefault();
+
+    let baseValue = parseInt(base.value);
+
+    let heightValue = parseInt(height.value);
+
+    let area = 0.5 * baseValue * heightValue;
+
+    output.innerHTML = "Area = " + area;
+}
+
 
 baseHeight.addEventListener("click", function(event){
 
@@ -20,18 +37,13 @@ baseHeight.addEventListener("click", function(event){
     
     if(baseAndHeightDiv.style.display == 'none'){
         baseAndHeightDiv.style.display = 'block';
+    
     }else{
         baseAndHeightDiv.style.display = 'none';
     }
 
-    // let base = document.getElementById("base");
-
-    // let baseValue = base.value;
-
-    // let height = document.getElementById("height");
-
-    // let heightValue = height.value;
-
+    calculateArea;
+    
 });
 
-// calculateBtn.addEventListener("click", function);
+calculateBtn.addEventListener("click", calculateArea);
