@@ -1,52 +1,54 @@
 // Triangle containing base and height
 
-// let baseHeight = document.getElementById("base_height");
+let baseHeight = document.getElementById("base_height");
 
-// let length2SidesAndAngle = document.getElementById("length_2_and_angle");
+let length2SidesAndAngle = document.getElementById("length_2_and_angle");
 
-// let baseHeightOutputForm = document.getElementById("base_and_height_output_form");
+let baseHeightOutputForm = document.getElementById("base_and_height_output_form");
 
-// let output = document.querySelector(".output");
+let output1 = document.querySelector("#output1");
 
-// let calculateBtn1 = document.querySelector(".submit_btn");
+let calculateBtn1 = document.querySelector("#submit_btn1");
 
-// let base = document.getElementById("base");
+let base = document.getElementById("base");
 
-// let height = document.getElementById("height");
+let height = document.getElementById("height");
 
-// // function to calculate area for 1st radio button
-// function calculateArea1(event){
+// function to calculate area for 1st radio button
+function calculateArea1(event){
 
-//     event.preventDefault();
+    event.preventDefault();
 
-//     let baseValue = parseInt(base.value);
+    let baseValue = parseInt(base.value);
 
-//     let heightValue = parseInt(height.value);
+    let heightValue = parseInt(height.value);
 
-//     let area = 0.5 * baseValue * heightValue;
+    let area = 0.5 * baseValue * heightValue;
 
-//     output.innerHTML = "Area = " + area;
-// }
+    console.log(`base: ${baseValue} height: ${heightValue} area: ${area}`);
+
+    output1.innerHTML = "Area = " + area;
+}
 
 
-// baseHeight.addEventListener("click", function(event){
+baseHeight.addEventListener("click", function(event){
 
-//     event.preventDefault();
+    event.preventDefault();
 
-//     let baseAndHeightDiv = document.querySelector("#base_and_height");
+    let baseAndHeightDiv = document.querySelector("#base_and_height");
     
-//     if(baseAndHeightDiv.style.display == 'none'){
-//         baseAndHeightDiv.style.display = 'block';
+    if(baseAndHeightDiv.style.display == 'none'){
+        baseAndHeightDiv.style.display = 'block';
     
-//     }else{
-//         baseAndHeightDiv.style.display = 'none';
-//     }
+    }else{
+        baseAndHeightDiv.style.display = 'none';
+    }
 
-//     calculateArea1;
+    calculateArea1;
     
-// });
+});
 
-// calculateBtn1.addEventListener("click", calculateArea1);
+calculateBtn1.addEventListener("click", calculateArea1);
 
 
 // If you have length of 3 sides
@@ -59,11 +61,11 @@ let inputB = document.getElementById("input_2");
 
 let inputC = document.getElementById("input_3");
 
-let calculateBtn2 = document.querySelector(".submit_btn");
+let calculateBtn2 = document.querySelector("#submit_btn2");
 
 let lengthOf3SidesDiv = document.getElementById("length_of_3_sides");
 
-let output = document.querySelector(".output");
+let output2 = document.querySelector("#output2");
 
 let showError = document.querySelector(".display_error");
 
@@ -72,30 +74,24 @@ function calculateArea2(event){
 
     event.preventDefault();
 
-    console.log("inside Cal func");
-
     let inputAValue = parseInt(inputA.value);
 
     let inputBValue = parseInt(inputB.value);
 
     let inputCValue = parseInt(inputC.value);
 
-    console.log(`A: ${inputAValue}  B: ${inputBValue} C : ${inputCValue}`);
-
     let s = (inputAValue + inputBValue + inputCValue) / 2;
 
     if(((inputAValue + inputBValue) >= inputCValue) && ((inputAValue + inputCValue) >= inputBValue) && ((inputBValue + inputCValue) >= inputAValue)){
 
         // Calculate area
-        let area1 = Math.sqrt(s * ((s-inputAValue) * (s-inputBValue) * (s-inputCValue)));
+        let area2 = Math.sqrt(s * ((s-inputAValue) * (s-inputBValue) * (s-inputCValue)));
 
-        output.innerHTML = "Area = " + area1;
+        output2.innerHTML = "Area = " + area2;
     }
     else{
         showError.innerHTML = "Enter valid side lengths such that each side length should be less than sum of other two sides";
     }
-
-    
 
 }
 
