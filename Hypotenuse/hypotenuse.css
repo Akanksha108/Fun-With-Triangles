@@ -8,10 +8,10 @@ h1{
 }
 
 .triangle{
-    height: 95vh;
+    height: 73vh;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 360px) {
 
     .triangle{
         height: 75vh;
