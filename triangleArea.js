@@ -84,7 +84,7 @@ function calculateArea2(event){
 
     let s = (inputAValue + inputBValue + inputCValue) / 2;
 
-    if(((inputAValue + inputBValue) < inputCValue) && ((inputAValue + inputCValue) < inputBValue) && ((inputBValue + inputCValue) < inputAValue)){
+    if(((inputAValue + inputBValue) >= inputCValue) && ((inputAValue + inputCValue) >= inputBValue) && ((inputBValue + inputCValue) >= inputAValue)){
 
         // Calculate area
         let area1 = Math.sqrt(s * ((s-inputAValue) * (s-inputBValue) * (s-inputCValue)));
