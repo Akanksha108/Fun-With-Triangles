@@ -4,7 +4,7 @@ const angleInput2 = document.getElementById("angle_input_2");
 
 const angleInput3 = document.getElementById("angle_input_3");
 
-const submitBtn = document.getElementById("submit_btn");
+const submitBtn = document.querySelector(".submit_btn");
 
 let output = document.querySelector(".output");
 

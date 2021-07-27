@@ -8,7 +8,7 @@ let baseHeightOutputForm = document.getElementById("base_and_height_output_form"
 
 let output = document.querySelector(".output");
 
-let calculateBtn = document.querySelector("#submit_btn");
+let calculateBtn1 = document.querySelector(".submit_btn");
 
 let base = document.getElementById("base");
 
@@ -46,11 +46,19 @@ baseHeight.addEventListener("click", function(event){
     
 });
 
-calculateBtn.addEventListener("click", calculateArea);
+calculateBtn1.addEventListener("click", calculateArea);
 
 // If you have length of 3 sides
 
 let length3Sides = document.getElementById("length_3");
+
+let inputA = document.getElementById("input_1");
+
+let inputB = document.getElementById("input_2");
+
+let inputC = document.getElementById("input_3");
+
+let calculateBtn2 = document.querySelector(".submit_btn");
 
 let lengthOf3SidesDiv = document.getElementById("length_of_3_sides");
 
@@ -61,4 +69,5 @@ length3Sides.addEventListener("click", function(){
         lengthOf3SidesDiv.style.display = 'none';
     }
 });
+
 
