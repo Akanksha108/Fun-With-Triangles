@@ -41,8 +41,6 @@ baseHeight.addEventListener("click", function(event){
     }else{
         baseAndHeightDiv.style.display = 'none';
     }
-
-    calculateArea1;
     
 });
 
@@ -103,7 +101,6 @@ length3Sides.addEventListener("click", function(event){
         lengthOf3SidesDiv.style.display = 'none';
     }
 
-    calculateArea2;
 });
 
 calculateBtn2.addEventListener("click", calculateArea2);
@@ -124,6 +121,8 @@ let twoSidesAndAngle = document.querySelector("#two_sides_and_angle");
 
 let output = document.getElementById("output3");
 
+let PI = Math.PI;
+
 function calculateArea3(event){
     event.preventDefault();
 
@@ -133,9 +132,8 @@ function calculateArea3(event){
 
     let angleInputValue = parseInt(angleInput.value);
 
-    console.log((0.7853981633974483) * (180/Math.PI));
+    let area = 0.5 * side1Value * side2Value * Math.sin(angleInputValue * PI / 180);
 
-    let area = 0.5 * side1Value * side2Value * Math.sin(angleInputValue);
 
     output.innerHTML = "Area = " + area;
 }
