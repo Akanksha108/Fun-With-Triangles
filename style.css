@@ -14,7 +14,7 @@ body{
 .main{
     text-align: center;
     align-items: center;
-    /* height: 71vh; */
+    height: 71vh;
     /* display: flex; */
 }
 
@@ -139,23 +139,6 @@ label{
     padding: 15px;
 }
 
-/* For first radio button */
-.area_para{
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.triangle_options{
-    padding: 10px;
-    margin: 10px;
-    padding-left: 0;
-    margin-left: 0;
-    font-weight: bold;
-}
-
-#base_and_height{
-    display: none;
-}
 
 .angle_input_link{
     height: 6vh;
@@ -163,22 +146,6 @@ label{
     margin: 10px;
     width: 5%;
     border: 2px solid black;
-}
-
-/* for second radio button */
-
-#length_of_3_sides{
-    display: none;
-}
-
-.display_error{
-    font-size: large;
-    font-weight: bold;
-}
-
-/* For third radio button */
-#two_sides_and_angle{
-    display: none;
 }
 
 
