@@ -17,22 +17,14 @@
     font-weight: bold;
 }
 
-#base_and_height{
+/* #base_and_height{
     display: none;
-}
+} */
+
 
 /* for second radio button */
-
-#length_of_3_sides{
-    display: none;
-}
 
 .display_error{
     font-size: large;
     font-weight: bold;
-}
-
-/* For third radio button */
-#two_sides_and_angle{
-    display: none;
 }

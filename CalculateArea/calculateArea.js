@@ -1,8 +1,5 @@
-// Triangle containing base and height
-
+// Triangle containing base and height(first radio button)
 let baseHeight = document.getElementById("base_height");
-
-let baseHeightOutputForm = document.getElementById("base_and_height_output_form");
 
 let output1 = document.querySelector("#output1");
 
@@ -11,6 +8,51 @@ let calculateBtn1 = document.querySelector("#submit_btn1");
 let base = document.getElementById("base");
 
 let height = document.getElementById("height");
+
+let baseHeightOutputForm = document.getElementById("base_and_height");
+
+let baseAndHeightDiv = document.querySelector("#base_and_height");
+
+
+
+// If you have length of 3 sides(second radio button)
+
+let lengthOf3SidesDiv = document.getElementById("length_of_3_sides");
+
+let length3Sides = document.getElementById("length_3");
+
+let inputA = document.getElementById("input_1");
+
+let inputB = document.getElementById("input_2");
+
+let inputC = document.getElementById("input_3");
+
+let calculateBtn2 = document.querySelector("#submit_btn2");
+
+let output2 = document.querySelector("#output2");
+
+let showError = document.querySelector(".display_error");
+
+
+//If you have 2 sides and included angle(third radio button)
+
+let side1 = document.getElementById("input_a");
+
+let side2 = document.getElementById("input_b");
+
+let angleInput = document.getElementById("input_c");
+
+let calculateBtn3 = document.querySelector("#submit_btn3");
+
+let length2SidesAndAngle = document.getElementById("length_2_and_angle");
+
+let output = document.getElementById("output3");
+
+let PI = Math.PI;
+
+let twoSidesAndAngle = document.querySelector("#two_sides_and_angle");
+
+
 
 // function to calculate area for 1st radio button
 function calculateArea1(event){
@@ -32,38 +74,21 @@ function calculateArea1(event){
 baseHeight.addEventListener("click", function(event){
 
     event.preventDefault();
-
-    let baseAndHeightDiv = document.querySelector("#base_and_height");
     
     if(baseAndHeightDiv.style.display == 'none'){
         baseAndHeightDiv.style.display = 'block';
-    
-    }else{
-        baseAndHeightDiv.style.display = 'none';
     }
-    
 });
 
 calculateBtn1.addEventListener("click", calculateArea1);
 
+// if(baseAndHeightDiv.style.display == 'block'){
+//     console.log("block");
+//     lengthOf3SidesDiv.style.display = 'none';
+//     twoSidesAndAngle.style.display = 'none';
+// }
 
-// If you have length of 3 sides
 
-let length3Sides = document.getElementById("length_3");
-
-let inputA = document.getElementById("input_1");
-
-let inputB = document.getElementById("input_2");
-
-let inputC = document.getElementById("input_3");
-
-let calculateBtn2 = document.querySelector("#submit_btn2");
-
-let lengthOf3SidesDiv = document.getElementById("length_of_3_sides");
-
-let output2 = document.querySelector("#output2");
-
-let showError = document.querySelector(".display_error");
 
 // function to calculate area for 2nd radio button
 function calculateArea2(event){
@@ -97,31 +122,15 @@ length3Sides.addEventListener("click", function(event){
 
     if(lengthOf3SidesDiv.style.display == 'none'){
         lengthOf3SidesDiv.style.display = 'block';
-    }else{
-        lengthOf3SidesDiv.style.display = 'none';
     }
 
 });
 
 calculateBtn2.addEventListener("click", calculateArea2);
 
-//If you have 2 sides and included angle
 
-let side1 = document.getElementById("input_a");
 
-let side2 = document.getElementById("input_b");
-
-let angleInput = document.getElementById("input_c");
-
-let calculateBtn3 = document.querySelector("#submit_btn3");
-
-let length2SidesAndAngle = document.getElementById("length_2_and_angle");
-
-let twoSidesAndAngle = document.querySelector("#two_sides_and_angle");
-
-let output = document.getElementById("output3");
-
-let PI = Math.PI;
+//function to calculate area for third radio button
 
 function calculateArea3(event){
     event.preventDefault();
@@ -145,10 +154,8 @@ length2SidesAndAngle.addEventListener("click",function(event){
     if(twoSidesAndAngle.style.display == 'none'){
         twoSidesAndAngle.style.display = 'block';
     }
-    else{
-        twoSidesAndAngle.style.display = 'none'
-    }
 });
 
 calculateBtn3.addEventListener("click", calculateArea3);
+
 
