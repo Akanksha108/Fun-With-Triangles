@@ -148,6 +148,46 @@ label{
     border: 2px solid black;
 }
 
+/* Triangle quiz */
+.triangle_quiz{
+    display: flex;
+    justify-content: center;
+}
+
+input[type="radio"], .questions_label{
+    float: left;
+    padding: 3px;
+    margin-right: 10px;
+}
+
+input[type="radio"]{
+    margin-right: 0;
+}
+
+.triangle_quiz_questions{
+    text-align: left;
+    margin-bottom: 0;
+    font-weight: bolder;
+}
+
+.questions{
+    background-color: aqua;
+    height: 130px;
+    padding-top: 10px;
+    margin: 20px 0;
+}
+
+.quiz{
+    width: 60%;
+}
+
+.quiz_para{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 25px;
+}
+
+
 
 @media screen and (min-width: 360px) {
     .grid{
