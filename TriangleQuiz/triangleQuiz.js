@@ -130,7 +130,7 @@ submitBtn.addEventListener("click", function(){
 
     for(let i = 0; i < questions.length; i++){
 
-        questions[i].style.backgroundColor = 'green';
+        questions[i].style.backgroundColor = '#BEF264';
     }
     
 });
