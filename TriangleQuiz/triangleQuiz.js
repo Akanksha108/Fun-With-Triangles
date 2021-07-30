@@ -127,10 +127,5 @@ que30cm.addEventListener("click", function(){
 
 submitBtn.addEventListener("click", function(){
     output.innerHTML = "Your Score : " + score;
-
-    for(let i = 0; i < questions.length; i++){
-
-        questions[i].style.backgroundColor = '#BEF264';
-    }
     
 });
