@@ -42,3 +42,9 @@ input[type="radio"]{
     font-size: 20px;
     margin: 25px;
 }
+
+@media screen and (max-width: 360px) {
+    .questions{
+        height: 160px;
+    }
+}
