@@ -2,30 +2,35 @@
 .calculate_area{
     min-height: 75vh;
     margin-top: 40px;
+    
 }
 
-/* For first radio button */
 .area_para{
     font-weight: bold;
     font-size: 20px;
 }
 
 .triangle_options{
-    padding: 10px;
-    margin: 10px;
-    padding-left: 0;
-    margin-left: 0;
-    font-weight: bold;
+    display: block;
+    margin: auto;
+    padding: 25px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    height: 5rem;
+    border-radius: 10px;
+    width: 50%;
+    cursor: pointer;
 }
 
-/* #base_and_height{
-    display: none;
-} */
-
-
-/* for second radio button */
 
 .display_error{
     font-size: large;
     font-weight: bold;
+}
+
+@media screen and (max-width: 360px) {
+    .triangle_options{
+        width: 100%;
+    }
 }
