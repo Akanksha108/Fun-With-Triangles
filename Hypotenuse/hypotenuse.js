@@ -14,11 +14,14 @@ function calculateHypotenuse(event){
 
     const input2 = parseInt(angle_Input2.value);
 
-    let hypotenuse = Math.sqrt((input1 * input1) + (input2 * input2)); 
+    if(input1 && input2){
+        let hypotenuse = Math.sqrt((input1 * input1) + (input2 * input2)); 
 
-    // console.log(hypotenuse);
-
-    output.innerHTML = "c = " + hypotenuse;
+         output.innerHTML = "c = " + hypotenuse;
+    }
+    else{
+        output.innerHTML = "Please fill all the required fields";
+    }
     
 }
 
