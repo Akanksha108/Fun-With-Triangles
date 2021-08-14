@@ -3,6 +3,10 @@
     padding-top: 15px;
 }
 
+body{
+    overflow: hidden;
+}
+
 .angle_triangle{
     width: 100%;
     min-height: 70vh;
