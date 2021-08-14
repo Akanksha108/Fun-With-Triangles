@@ -19,13 +19,19 @@ function angleTriangle(event){
 
    const input3 = parseInt(angleInput3.value);
 
-   let sum = input1 + input2 + input3;
+   if ( (input1 < 180) && (input2 < 180) && (input3 < 180)){
+    let sum = input1 + input2 + input3;
 
-   if(sum == 180){
-       output.innerHTML = "YuHu!!! These angles can make a triangle";
-   }else{
-       output.innerHTML = "These angles cannot make a triangle";
+        if(sum == 180){
+            output.innerHTML = "YuHu!!! These angles can make a triangle";
+        }else{
+            output.innerHTML = "These angles cannot make a triangle";
+        }
    }
+   else{
+       output.innerHTML = "Please enter valid angle values";
+   }
+   
 
 }
 
