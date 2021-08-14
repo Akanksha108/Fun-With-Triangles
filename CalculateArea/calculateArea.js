@@ -1,4 +1,4 @@
-// Triangle containing base and height(first radio button)
+// Triangle containing base and height(first button)
 let baseHeight = document.getElementById("base_height");
 
 let output1 = document.querySelector("#output1");
@@ -9,13 +9,13 @@ let base = document.getElementById("base");
 
 let height = document.getElementById("height");
 
-let baseHeightOutputForm = document.getElementById("base_and_height");
+// let baseHeightOutputForm = document.getElementById("base_and_height");
 
 let baseAndHeightDiv = document.querySelector("#base_and_height");
 
 
 
-// If you have length of 3 sides(second radio button)
+// If you have length of 3 sides(second button)
 
 let lengthOf3SidesDiv = document.getElementById("length_of_3_sides");
 
@@ -34,7 +34,7 @@ let output2 = document.querySelector("#output2");
 let showError = document.querySelector(".display_error");
 
 
-//If you have 2 sides and included angle(third radio button)
+//If you have 2 sides and included angle(third button)
 
 let side1 = document.getElementById("input_a");
 
@@ -54,7 +54,7 @@ let twoSidesAndAngle = document.querySelector("#two_sides_and_angle");
 
 
 
-// function to calculate area for 1st radio button
+// function to calculate area for 1st button
 function calculateArea1(event){
 
     event.preventDefault();
@@ -63,11 +63,14 @@ function calculateArea1(event){
 
     let heightValue = parseInt(height.value);
 
-    let area = 0.5 * baseValue * heightValue;
+    if(baseValue > 0 && heightValue > 0){
 
-    console.log(`base: ${baseValue} height: ${heightValue} area: ${area}`);
-
-    output1.innerHTML = "Area = " + area;
+        let area = 0.5 * baseValue * heightValue;
+        output1.innerHTML = "Area = " + area;
+    }
+    else{
+        output1.innerHTML = "Please enter valid values";
+    }
 }
 
 
@@ -82,15 +85,8 @@ baseHeight.addEventListener("click", function(event){
 
 calculateBtn1.addEventListener("click", calculateArea1);
 
-// if(baseAndHeightDiv.style.display == 'block'){
-//     console.log("block");
-//     lengthOf3SidesDiv.style.display = 'none';
-//     twoSidesAndAngle.style.display = 'none';
-// }
 
-
-
-// function to calculate area for 2nd radio button
+// function to calculate area for 2nd button
 function calculateArea2(event){
 
     event.preventDefault();
@@ -101,19 +97,22 @@ function calculateArea2(event){
 
     let inputCValue = parseInt(inputC.value);
 
-    let s = (inputAValue + inputBValue + inputCValue) / 2;
+    if(inputAValue > 0 && inputBValue > 0 && inputCValue > 0){
+        let s = (inputAValue + inputBValue + inputCValue) / 2;
 
-    if(((inputAValue + inputBValue) >= inputCValue) && ((inputAValue + inputCValue) >= inputBValue) && ((inputBValue + inputCValue) >= inputAValue)){
+        if(((inputAValue + inputBValue) >= inputCValue) && ((inputAValue + inputCValue) >= inputBValue) && ((inputBValue + inputCValue) >= inputAValue)){
 
-        // Calculate area
-        let area2 = Math.sqrt(s * ((s-inputAValue) * (s-inputBValue) * (s-inputCValue)));
+            // Calculate area
+            let area2 = Math.sqrt(s * ((s-inputAValue) * (s-inputBValue) * (s-inputCValue)));
 
-        output2.innerHTML = "Area = " + area2;
+            output2.innerHTML = "Area = " + area2;
+        }
+        else{
+            showError.innerHTML = "Enter valid side lengths such that each side length should be less than sum of other two sides";
+        }
+    }else{
+        showError.innerHTML = "Please enter valid values";
     }
-    else{
-        showError.innerHTML = "Enter valid side lengths such that each side length should be less than sum of other two sides";
-    }
-
 }
 
 length3Sides.addEventListener("click", function(event){
@@ -130,7 +129,7 @@ calculateBtn2.addEventListener("click", calculateArea2);
 
 
 
-//function to calculate area for third radio button
+//function to calculate area for third button
 
 function calculateArea3(event){
     event.preventDefault();
@@ -141,10 +140,14 @@ function calculateArea3(event){
 
     let angleInputValue = parseInt(angleInput.value);
 
-    let area = 0.5 * side1Value * side2Value * Math.sin(angleInputValue * PI / 180);
+    if(side1Value > 0 && side2Value > 0 && angleInputValue){
 
-
-    output.innerHTML = "Area = " + area;
+        let area = 0.5 * side1Value * side2Value * Math.sin(angleInputValue * PI / 180);
+        output.innerHTML = "Area = " + area;
+    }else{
+        output.innerHTML = "Please enter valid values";
+    }
+    
 }
 
 length2SidesAndAngle.addEventListener("click",function(event){
