@@ -105,7 +105,6 @@ h1{
 
 
 .output{
-    width: 30%;
     border-radius: 6px;
     background-color: var(--link-color);
     color: var(--primary-color);
@@ -183,13 +182,11 @@ label{
     .angle_input_link{
         width: 20%;
     }
-    
-}
 
-@media screen and (max-width: 360px) {
     .output{
         width: 70%;
     }
+    
 }
 
 @media screen and (min-width: 768px) {
@@ -207,6 +204,16 @@ label{
         margin-top: 20px;
     }
 
+    .output{
+        width: 50%;
+    }
+    
+}
+
+@media screen and (min-width: 1020px) {
+    .output{
+        width: 30%;
+    }
 }
 
 
