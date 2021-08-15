@@ -54,6 +54,7 @@ let PI = Math.PI;
 
 let twoSidesAndAngle = document.querySelector("#two_sides_and_angle");
 
+let error_3 = document.querySelector(".error_3");
 
 
 // function to calculate area for 1st button
@@ -124,8 +125,6 @@ function calculateArea2(event){
     else{
        showError.innerHTML = "Please fill all the required fields"; 
     }
-
-    
 }
 
 length3Sides.addEventListener("click", function(event){
@@ -153,14 +152,22 @@ function calculateArea3(event){
 
     let angleInputValue = parseInt(angleInput.value);
 
-    if(side1Value > 0 && side2Value > 0 && angleInputValue){
-
-        let area = 0.5 * side1Value * side2Value * Math.sin(angleInputValue * PI / 180);
-        output.innerHTML = "Area = " + area;
-    }else{
-        output.innerHTML = "Please enter valid values";
+    // Input Validation
+    if(side1Value && side2Value && angleInputValue){
+        if(side1Value > 0 && side2Value > 0) {
+            if(angleInputValue > 0.0001 && angleInputValue <= 360){
+                let area = 0.5 * side1Value * side2Value * Math.sin(angleInputValue * PI / 180);
+            output.innerHTML = "Area = " + area;
+            }else{
+                error_3.innerHTML = "Angle value must be between 0.0001 and 360";
+            }
+      }else{
+         error_3.innerHTML = "Please enter valid values";
+      }     
     }
-    
+    else{
+        error_3.innerHTML = "Please fill all the required fields";
+    } 
 }
 
 length2SidesAndAngle.addEventListener("click",function(event){
