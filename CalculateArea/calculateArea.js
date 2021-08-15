@@ -13,6 +13,8 @@ let height = document.getElementById("height");
 
 let baseAndHeightDiv = document.querySelector("#base_and_height");
 
+let error_1 = document.querySelector(".error");
+
 
 
 // If you have length of 3 sides(second button)
@@ -63,13 +65,17 @@ function calculateArea1(event){
 
     let heightValue = parseInt(height.value);
 
-    if(baseValue > 0 && heightValue > 0){
+    if(baseValue && heightValue){
+        if(baseValue > 0 && heightValue > 0){
 
-        let area = 0.5 * baseValue * heightValue;
-        output1.innerHTML = "Area = " + area;
-    }
-    else{
-        output1.innerHTML = "Please enter valid values";
+            let area = 0.5 * baseValue * heightValue;
+            output1.innerHTML = "Area = " + area;
+        }
+        else{
+            error_1.innerHTML = "Please enter valid values";
+        }
+    }else{
+        error_1.innerHTML = "Please fill all the required fields";
     }
 }
 
@@ -97,22 +103,29 @@ function calculateArea2(event){
 
     let inputCValue = parseInt(inputC.value);
 
-    if(inputAValue > 0 && inputBValue > 0 && inputCValue > 0){
-        let s = (inputAValue + inputBValue + inputCValue) / 2;
-
-        if(((inputAValue + inputBValue) >= inputCValue) && ((inputAValue + inputCValue) >= inputBValue) && ((inputBValue + inputCValue) >= inputAValue)){
-
-            // Calculate area
-            let area2 = Math.sqrt(s * ((s-inputAValue) * (s-inputBValue) * (s-inputCValue)));
-
-            output2.innerHTML = "Area = " + area2;
+    if(inputAValue && inputBValue && inputCValue){
+        if(inputAValue > 0 && inputBValue > 0 && inputCValue > 0){
+            let s = (inputAValue + inputBValue + inputCValue) / 2;
+    
+            if(((inputAValue + inputBValue) >= inputCValue) && ((inputAValue + inputCValue) >= inputBValue) && ((inputBValue + inputCValue) >= inputAValue)){
+    
+                // Calculate area
+                let area2 = Math.sqrt(s * ((s-inputAValue) * (s-inputBValue) * (s-inputCValue)));
+    
+                output2.innerHTML = "Area = " + area2;
+            }
+            else{
+                showError.innerHTML = "Enter valid side lengths such that each side length should be less than sum of other two sides";
+            }
+        }else{
+            showError.innerHTML = "Please enter valid values";
         }
-        else{
-            showError.innerHTML = "Enter valid side lengths such that each side length should be less than sum of other two sides";
-        }
-    }else{
-        showError.innerHTML = "Please enter valid values";
     }
+    else{
+       showError.innerHTML = "Please fill all the required fields"; 
+    }
+
+    
 }
 
 length3Sides.addEventListener("click", function(event){

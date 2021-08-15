@@ -23,9 +23,10 @@
 }
 
 
-.display_error{
+.show_error{
     font-size: large;
     font-weight: bold;
+    color: red;
 }
 
 @media screen and (min-width: 360px) {
